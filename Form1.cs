@@ -1,11 +1,10 @@
 using System.Text;
-using System.Windows.Forms;
 
 namespace trasliterator
 {
     public partial class Form1 : Form
     {
-        public Form1()
+        public Form1() 
         {
             InitializeComponent();
         }
@@ -21,13 +20,13 @@ namespace trasliterator
         {
             StringBuilder stringBuilder = new StringBuilder();
 
-            foreach(char c in ruText)
+            foreach (char c in ruText)
             {
                 try
                 {
-                    stringBuilder.Append(simvols[c]); 
-                } 
-                catch 
+                    stringBuilder.Append(simvols[c]);
+                }
+                catch
                 {
                     stringBuilder.Append(c);
                 }
@@ -38,7 +37,7 @@ namespace trasliterator
 
         Dictionary<char, string> simvols = new Dictionary<char, string>()
         {
-            
+
             {'À', "A"},
             {'Á', "B"},
             {'Â', "V"},
